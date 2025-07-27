@@ -28,6 +28,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "https://rsheptolut.github.io/mytvtierlist/",
               "budgets": [
                 {
                   "type": "initial",
