@@ -1,0 +1,25 @@
+<h1>My TV show tier list</h1>
+<p>
+  Pulled from IMDB based on my ratings:<br />
+  10 = S = Masterpiece<br />
+  9 = A = Amazing, will recommend<br />
+  8 = B = I liked it!<br />
+  7 = C = It's okay<br />
+  6 = D = Squirmed to get through, wish I didn't<br />
+  5 and below = F = Total garbage <br />
+</p>
+<input type="text" placeholder="Type to highlight..." [(ngModel)]="filter" />
+<br />
+<br />
+<main>
+  <section *ngFor="let tier of tiers" [id]="tier.label">
+	<h2 [style.background]="tier.color"><div>{{ tier.label }}</div></h2>
+	<div>
+	  <a *ngFor="let title of tier.titles" target="_blank" [title]="title.title" [href]="'https://imdb.com/title/' + title.id"
+		 [class.highlighted]="filter && title.title.toLowerCase().includes(filter.trim().toLowerCase())">
+		<img height="200" width="140" [src]="title.image" [alt]="title.title" />
+	  </a>
+	</div>
+  </section>
+</main>
+

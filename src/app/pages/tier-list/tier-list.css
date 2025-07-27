@@ -1,0 +1,79 @@
+
+:host {
+  --bg: #282828;
+  --fg: #ebdbb2;
+  --inv-fg: #1d2021;
+  --border: #d5c4a1;
+  --s: #d3869b;
+  --a: #61c117;
+  --b: #a3bb1a;
+  --c: #fabd2f;
+  --d: #a24900;
+  --f: #fb4931;
+  color: var(--fg);
+  background-color: var(--bg);
+  font-family: sans-serif;
+  display: block;
+  padding: 2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section {
+  border: 2px solid var(--border);
+  display: grid;
+  grid-template-columns: 5em auto;
+  grid-template-rows: minmax(10em, auto);
+  margin-bottom: 1.5rem;
+}
+
+section h2 {
+  border-right: 2px solid var(--border);
+  text-align: center;
+  margin: 0;
+  color: var(--inv-fg);
+  height: 100%;
+  position: relative;
+}
+
+section h2 div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+section > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section img {
+  height: 200px;
+  width: 140px;
+  border: 2px solid black;
+}
+
+section a.highlighted img {
+  animation: highlight-animation 0.4s infinite;
+}
+
+@keyframes highlight-animation {
+  0% {
+    border-color: red;
+  }
+  100% {
+    border-color: white;
+  }
+}
+
+#S h2 { background-color: var(--s); }
+#A h2 { background-color: var(--a); }
+#B h2 { background-color: var(--b); }
+#C h2 { background-color: var(--c); }
+#D h2 { background-color: var(--d); }
+#F h2 { background-color: var(--f); }

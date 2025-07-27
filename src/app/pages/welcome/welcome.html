@@ -1,0 +1,15 @@
+<div class="welcome-container">
+  <mat-card class="welcome-card">
+    <h1 class="welcome-title">Welcome to My TV Tier List</h1>
+    <p class="welcome-description">
+      A tool that you can use to quickly put together your personal tier list of TV shows or movies
+    </p>
+    <div class="welcome-action">
+      <span class="welcome-cta">To begin, enter your IMDB profile Id</span>
+      <mat-form-field appearance="outline" class="imdb-input">
+        <input matInput maxlength="32" placeholder="IMDB Profile Id" [(ngModel)]="imdbId">
+      </mat-form-field>
+      <button mat-raised-button color="primary" [disabled]="!imdbId()" (click)="onGenerate()">Generate</button>
+    </div>
+  </mat-card>
+</div>
