@@ -42,7 +42,7 @@ jobs:
       - name: Commit build artifacts to repo @ gh-pages
         run: |
           \rm -rfv /pages/
-          \cp -r master/dist/** pages/
+          \cp -r master/dist/MyTvTierList/browser/** pages/
           cd pages
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
