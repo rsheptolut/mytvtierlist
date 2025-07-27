@@ -119,7 +119,7 @@ export class ImportComponent implements AfterViewChecked, AfterViewInit {
     });
     let result = null;
     try {
-      const url = `https://api.graphql.imdb.com/`;
+      const url = `https://cors.shru.workers.dev?https://api.graphql.imdb.com/`;
       const request = {"operationName":"PersonalizedUserData","variables":{"locale":"en-US","idArray": ids,"includeUserData":false,"location":{"latLong":{"lat":"-27.5","long":"153.02"}},"otherUserId":"ur150921972","fetchOtherUserRating":true},"extensions":{"persistedQuery":{"version":1,"sha256Hash":"afebb5841a7a0072bc4d4c3eb29c64832e531a0846c564caf482f814e8ce12c7"}}}
       result = await this.http.post(
         url, request,
